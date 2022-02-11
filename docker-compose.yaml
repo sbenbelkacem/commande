@@ -1,0 +1,16 @@
+version: '2'
+services:
+  commande-db:
+    container_name: commande-db
+    image: postgres
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_PASSWORD=dev
+  commande-db-prod:
+    container_name: commande-db-prod
+    image: postgres
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_PASSWORD=prod
