@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1")
@@ -34,4 +35,11 @@ public class CommandeResource {
                 .toUri();
         return ResponseEntity.created(uri).build();
     }
+
+    @GetMapping("/commandes")
+    public ResponseEntity<List<CommandeDto>> getAllCommandes() {
+        return ResponseEntity.ok(commandeService.getAllCommandes());
+    }
+
+
 }
