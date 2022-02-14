@@ -1,7 +1,7 @@
 node("slave-ic"){
 
     stage("checkout-commande"){
-        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'git@github.com:sbenbelkacem/commande']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sbenbelkacem/commande']]])
     }
 
     stage("build"){
