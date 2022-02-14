@@ -4,7 +4,7 @@ public enum CommandeStatus {
     A_VALIDER("A valider"),
     EN_COURS_DE_LIVRAISON("En cours de livraison"),
     LIVRE("Livrée"),
-    COMFIRME("Conformée");
+    COMFIRME("Confirmée");
     private final String label;
 
     CommandeStatus(String label) {
