@@ -23,9 +23,9 @@ node("slave-ic"){
     node("vm-deploy"){
         stage("deploy"){
             unstash 'livrable-commande'
-            unstach 'commande-dockerfile'
-            unstach 'commande-dockerfile-compose'
-            unstach 'commande-launch'
+            unstash 'commande-dockerfile'
+            unstash 'commande-dockerfile-compose'
+            unstash 'commande-launch'
             sh "chmod 777 launch.sh"
             sh "./launch.sh"
         }
