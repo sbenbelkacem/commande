@@ -1,4 +1,4 @@
-node("salve-ci"){
+node("slave-ci"){
 
     stage("checkout-commande"){
         checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'git@github.com:sbenbelkacem/commande.git']]])
