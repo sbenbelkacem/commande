@@ -14,7 +14,7 @@ node("slave-ic"){
     }
 
     stage("quality check"){
-        sh "mvnw sonar:sonar \
+        sh "./mvnw sonar:sonar \
           -Dsonar.projectKey=commande \
           -Dsonar.host.url=http://54.234.48.131:11001 \
           -Dsonar.login=5a4a695f5fc203837db9c3345848907456499d12"
